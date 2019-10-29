@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Jack and the Beanstalk</title>
+    <link rel="stylesheet" href="beanClimb.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script>
+      function id(x) {
+        return document.getElementById(x);
+      }
+      function nex() {
+        document.getElementsByTagName('body')[0].style = "animation:colfade 1s ease-in-out both;";
+        setTimeout(()=>{location.href="cloudCastle.html"}, 1000);
+      }
+      setTimeout(()=>{id('beansCont').style = "display:block;"}, 12000);
+      setTimeout(()=>{id('jack').src = "standing-up-man-.svg"}, 5000);
+      setTimeout(()=>{id('jack').src = "jackWalking.svg"}, 6000);
+      setTimeout(()=>{id('jack').src = "jackClimbing.svg"}, 9000);
+    </script>
+  </head>
+  <body>
+
+    <div id="cloudcont1">
+      <img id="cloud1" src="cloud1.svg">
+      <img id="cloud2" src="cloud2.svg">
+      <img id="cloud3" src="cloud3.svg">
+    </div>
+    <div id="cloudcont2">
+      <img id="cloud1" src="cloud1.svg">
+      <img id="cloud2" src="cloud2.svg">
+      <img id="cloud3" src="cloud3.svg">
+    </div>
+
+    <img id="tree" src="tree.svg">
+    <img id="cabin" src="cabin.svg">
+
+    <img id="frontmount" src="frontmount.svg">
+    <img id="backmount" src="backmount.svg">
+    <img id="sun" src="sun.svg">
+    <img id="arrow" onclick="nex()" src="arrow-pointing-to-right.svg">
+    <img id="beanstalk" src="beanstalk.svg">
+    <img id="jack" src="jackWalking.svg">
+    <div id="text1">Jack was astonished by what he saw the next<br> morning and decided to climb the beanstalk.</div>
+
+  </body>
+</html>

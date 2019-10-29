@@ -1,0 +1,180 @@
+body {
+  background:#89c6f5;
+  overflow:hidden;
+  margin:0;
+  animation:fadein 2s ease-in-out both;
+}
+@keyframes fadein {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+img {
+  position:absolute;
+}
+#cloud1 {
+  width:250px;
+  left:0;
+  animation:bob 2s ease-in-out infinite;
+}
+#cloud2 {
+  width:300px;
+  left:30vw;
+  animation:bob 2s ease-in-out 500ms infinite;
+}
+#cloud3 {
+  width:300px;
+  left:66vw;
+  animation:bob 2s ease-in-out 1s infinite;        
+}
+@keyframes bob {
+  50% {transform:translateY(5px)}
+}
+#cloudcont1,#cloudcont2 {
+  width:100vw;
+  animation:cloudmove 40s linear infinite;
+  position:absolute;
+  top:-20px;
+  z-index:1;
+}
+@keyframes cloudmove {
+  to {transform:translateX(100vw);}
+}
+#cloudcont2 {
+  left:-100vw;
+}
+#sun {
+  width:250px;
+  top:20px;
+  left:1100px;
+  animation:sunrot 4s ease-in-out infinite; 
+}
+@keyframes sunrot {
+  50% {
+    transform:rotate(5deg);
+  }
+}
+#ground {
+  width:100vw;
+  position:absolute;
+  top:55vh;
+}
+#boothcont {
+  position:absolute;
+  top:47vh;
+  left:-5vw;
+  z-index:1;
+  width:110vw;
+  height:20vh;
+  display:flex;
+  justify-content:space-around;
+}
+#boothcont * {
+  width:200px;
+  position:static;
+}
+#beanMan {
+  width:250px;
+  top:580px;
+  left:850px;
+  z-index:3;
+}
+#marketSign {
+  width:300px;
+  top:300px;
+  left:200px;
+  z-index:-1;
+}
+#arrow {
+  width:120px;
+  bottom:50px;
+  right:120px;
+  z-index:3;
+  transition:transform 500ms;
+  animation:fadein 500ms ease-in-out 13s both;
+}
+#arrow:hover {
+  transform:scale(1.1);
+}
+@keyframes fadeout {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}
+#jackAndCow {
+  width:600px;
+  bottom:85px;
+  left:-460px;
+  z-index:3;
+  animation:walk 5s ease-out forwards;
+}
+@keyframes walk {
+  to {
+    transform:translateX(730px);
+  }
+}
+#beans {
+  width:50px;
+  height:50px;
+  position:absolute;
+  left:830px;
+  top:692px;
+  z-index:3;
+  display:none;
+  animation:fallbeans 1s ease-in both;
+}
+@keyframes fallbeans {
+  to {
+    transform:translateY(50px);
+  }
+}
+#beans > * {
+  background:wheat;
+  position:absolute;
+  width:30%;
+  height:30%;
+}
+#bean1 {
+  clip-path:circle(20%);
+  left:30%;
+  top:20%;
+}
+#bean2 {
+  clip-path:circle(35%);
+  left:67%;
+  top:10%;
+}
+#bean3 {
+  clip-path:circle(26%);
+  left:43%;
+  top:50%;
+}
+.text {
+  color:#2f3f4a;
+  font-family:'Roboto Slab', serif;
+  position:absolute;
+  font-size:25px;
+  top:340px;
+  left:700px;
+  z-index:3;
+}
+#text1 {
+  animation:fadein 2s ease-in-out 1s both, fadeout 2s ease-in-out 6s forwards;
+}
+#text2 {
+  animation:fadein 2s ease-in-out 7s both, fadeout 2s ease-in-out 12s forwards;
+}
+@keyframes fadeout {
+  from {
+    opacity:1;
+  }
+  to {
+    opacity:0;
+  }
+}

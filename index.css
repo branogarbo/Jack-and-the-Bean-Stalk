@@ -1,0 +1,86 @@
+body {
+  margin:0;
+  overflow:hidden;
+  animation:fade 2s ease-in-out 9s both;
+  cursor:default;
+  background:hsl(39, 77%, 83%);
+}
+@keyframes fade {
+  to {
+    background:#89c6f5;
+  }
+}
+svg {
+  width:100vw;
+  height:100vh;
+  transform:scale(1.4);
+}
+.dimn {
+  font-size:151px;
+  font-family:'Shrikhand';
+  stroke-dasharray:0 200;
+  stroke-linecap:round;
+  stroke-width:0;
+  fill:rgba(0,0,0,0);  
+  stroke:#009549;
+  animation:dash 10s ease-in-out 1s both;
+}
+@keyframes dash {
+  10% {
+    stroke-width:2px;
+  }
+  20% {
+    fill:rgba(0,0,0,0);
+  }
+  50% {
+    stroke-dasharray:350 0;
+    fill:hsl(122, 45%, 67%);
+    stroke-width:2px;
+  }
+  90% {
+    stroke-width:2px;
+  }
+  100% {
+    fill:rgba(0,0,0,0);   
+    stroke-width:0; 
+  }
+}
+.mid {
+  transform:scale(0.8);
+  transform-origin:50% 50%;
+}
+#leaf {
+  transform:rotate(-20deg) scale(0);
+  transform-origin:4px 97px;
+  position:absolute;
+  left:1309px;
+  top:614px;
+  width:100px;
+  height:100px;
+  animation:leafpopout 400ms ease-in-out 5s both, leafpopin 400ms ease-in-out 8s forwards;
+}
+@keyframes leafpopout {
+  50% {
+    transform:rotate(0deg) scale(1);
+  }
+  70% {
+    transform:rotate(7deg);
+  }
+  80% {
+    transform:rotate(3deg);
+  }
+  100% {
+    transform:rotate(5deg) scale(1);
+  }
+}
+@keyframes leafpopin {
+  0% {
+    transform:rotate(5deg) scale(1);
+  }
+  50% {
+    transform:rotate(5deg) scale(1);
+  }
+  100% {
+    transform:rotate(0deg) scale(0);
+  }
+}

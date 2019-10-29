@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Jack and the Beanstalk</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link rel="stylesheet" href="market.css">
+    <script>
+      function id(x) {
+        return document.getElementById(x);
+      }
+      function nex() {
+        document.getElementsByTagName('body')[0].style = "animation:fadeout 1s ease-in-out both;";
+        setTimeout(()=>{location.href = "beanThrow.html"}, 1000);
+      }
+      setTimeout(()=>{id('jackAndCow').src = "jackAndCow1back.svg"}, 5000);
+      setTimeout(()=>{
+        id('beanMan').src = "beanManReach.svg";
+        id('jackAndCow').src = "jackAndCow1reach.svg";
+      }, 7000);
+      setTimeout(()=>{id('beans').style = "display:block;"}, 7100);
+      setTimeout(()=>{id('beanMan').src = "beanMan.svg"}, 8000)
+    </script>
+  </head>
+  <body>
+
+    <img id="sun" src="sun.svg">
+    <div id="cloudcont1">
+        <img id="cloud1" src="cloud1.svg">
+        <img id="cloud2" src="cloud2.svg">
+        <img id="cloud3" src="cloud3.svg">
+      </div>
+      <div id="cloudcont2">
+        <img id="cloud1" src="cloud1.svg">
+        <img id="cloud2" src="cloud2.svg">
+        <img id="cloud3" src="cloud3.svg">
+      </div>
+
+      <div id="boothcont">
+        <img src="grocery.svg">
+        <img src="online-store.svg">
+        <img src="store.svg">
+        <img src="store (1).svg">
+        <img src="store.svg">
+        <img src="grocery.svg">
+        <img src="store (1).svg">
+        <img src="online-store.svg">
+        <img src="store.svg">
+      </div>
+      <img id="ground" src="marketHill.svg">
+      <img id="beanMan" src="beanMan.svg">
+      <img id="marketSign" src="marketSign.svg">
+      <img id="arrow" onclick="nex()" src="arrow-pointing-to-right.svg">
+      <img id="jackAndCow" src="jackAndCow.svg">
+      <div id="beans">
+        <div id="bean1"></div>
+        <div id="bean2"></div>
+        <div id="bean3"></div>
+      </div>
+      <div id="text1" class="text">While Jack was at the market trying to sell the cow,<br> a strange man offered to buy the cow with magical beans.</div>
+      <div id="text2" class="text">Being the curious boy he was, Jack accepted the offer.</div>
+
+  </body>
+</html>
