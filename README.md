@@ -1,2 +1,2 @@
 # Jack-and-the-Bean-Stalk
-Project for class.
+Animation project for class.
